@@ -6,12 +6,13 @@
 body{
     font-family: 'Poppins';
 }
+/* Header Start */
 
 header{
     justify-content: space-between;
-    height: 44px;
+    /* height: 44px; */
     margin: auto;
-    padding: 2% 10%;
+    padding: 15px 10%;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 500;
@@ -23,7 +24,6 @@ padding{
 .flex{
     display: flex;
 }
-
 .logo{
     background-color: #007ced;
     height: 40px;
@@ -38,6 +38,7 @@ padding{
     font-family: 'Ribeye';
 }
 
+
 .links{
     gap: 40px;
 }
@@ -50,5 +51,144 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.icon-hamburger{
+    display: none;
+    color: black;
+}
+
+/* Header end */
+@media screen and (max-width:640px) {
+    header{
+        padding: 15px 5%;
+    }
+
+    .icon-hamburger{
+        display: flex;
+        color: black;
+    }
+
+    .links{
+        display: none;
+    }
+    
+}
+
+/* Hero-section */
+
+.hero-section {
+    align-items: center;
+    padding: 7% 10%;
+    gap: 60px;
+
+}
+
+.image-section{
+    background-color: #007ced;
+    border-radius: 50%;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("images/pix.png");
+    background-repeat: top center;
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    box-shadow: 4px 4px 8px 8px rgb(82, 79, 79);}
+
+.text-section{
+    width: 50%;
+}
+
+.name{
+    align-items: left;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Poppins';
+}
+
+.name span{
+    font-weight: 500;
+}
+.name-break{
+    display: block;
+}
+
+.text-section p{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+}
+
+.text-section button{
+    font-size: 2rem;
+    padding: 8px 20px;
+    border: none;
+    background-color: #007ced;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+
+}
+br{
+    display: none;
+}
+
+/* Hero-section end*/
+@media screen and (max-width:640px) {
+    .hero-section{
+        display: block;
+        margin: 5px auto;
+        /* background-color: red; */
+    }
+
+    .image-section{
+        background-size: cover;
+        /* padding: 10px; */
+        height: 250px;
+        width: 250px;
+        margin: auto;
+    }
+    .name{
+     
+        font-size: 2rem;
+        font-weight: 900;
+        font-family: 'Poppins';
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .text-section{
+        width: 100%;
+    }
+
+    .text-section p{
+        font-size: 1.2rem;
+        text-align: center;
+    
+    }
+
+    .text-section button{
+        font-size: 1.5rem;
+
+    }
+    br{
+        display: block;
+    }
+
+    .adjective{
+        display: none;
+    }
+
+  
+    
+}
+
 
 
