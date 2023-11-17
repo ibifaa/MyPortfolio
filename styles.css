@@ -15,6 +15,7 @@ h2{
     font-weight: 500;
 }
 
+
 section{
     padding: 5% 10%;
 }
@@ -35,7 +36,11 @@ header{
     justify-content: space-between;
     /* height: 44px; */
     /* margin: auto; */
-    /* padding: 5% 10%; */
+   padding-top: 1%;
+   padding-bottom: 1%;
+   padding-left: 10%;
+   padding-right: 10%;
+
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 500;
@@ -173,6 +178,7 @@ a{
 
 .name span{
     font-weight: 500;
+    font-family: 'Ribeye';;
 }
 .name-break{
     display: block;
@@ -331,9 +337,6 @@ color: white;
     margin: auto;
 }
 
-
-
-
 article{
     width: 450px;
     /* height: 700px; */
@@ -362,6 +365,7 @@ article img{
     color: black;
     margin: 20px 0px;
     padding: 10px 30px;
+    font-size: 1rem;
 }
 
 .card button a{
@@ -397,11 +401,8 @@ article img{
 
     }
 
-    .article-footer button{
-       text-align: center;
-       margin: 5% auto;
-       font-size: 1rem;
-    
+    .article-footer{
+     text-align: center;
     }
     
     
