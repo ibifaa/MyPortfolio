@@ -37,6 +37,10 @@ header{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 500;
     font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
 }
 padding{
     padding-right: 10%;
@@ -61,6 +65,7 @@ padding{
 
 .links{
     gap: 40px;
+    justify-content: space-between;
 }
 
 li{
@@ -91,6 +96,40 @@ a{
     .links{
         display: none;
     }
+
+    .showLinks{
+        display: block;
+        margin-top: 10%;
+        position: absolute;
+        height: 100px;
+        background-color: white;
+        width: 25%;
+        left: 0;
+        padding: 10px;
+        line-height: 1.5;
+        font-size: 1rem;
+        z-index: 2;
+        top: 10;
+    }
+
+    /* .links li {
+        background-color: black;
+        color: white;
+        width: 100%;
+    } */
+
+    .links li:hover{
+        background-color: black;
+        color: white;
+        width: 100%;
+        
+    }
+
+    .links li a:hover{
+        color: white;
+        padding: 5% ;
+        font-size: 1.5rem;
+    }
     
 }
 
@@ -98,21 +137,20 @@ a{
 
 .hero-section {
     align-items: center;
-    padding: 7% 10%;
-    gap: 60px;
+    padding: 12% 10% 8%;
+    gap: 80px;
+    margin: auto;
+   
 
 }
 
 .image-section{
     background-color: #444444;
     border-radius: 50%;
-    /* align-items: center; */
-    /* overflow: hidden; */
     background-image: url("images/pix.png");
     background-repeat: 60% 40%;
     background-size: cover;
     background-repeat: no-repeat;
-    /* padding: 10px; */
     height: 400px;
     width: 400px;
     box-shadow: 0px 0px 30px 2px rgb(97, 93, 93);}
@@ -164,7 +202,7 @@ br{
     .hero-section{
         display: block;
         margin: 5px auto;
-        /* background-color: red; */
+        padding: 25% 10% 5%;
     }
 
     .image-section{
@@ -177,10 +215,11 @@ br{
     .name{
      
         font-size: 2rem;
-        font-weight: 900;
+        font-weight: 700;
         font-family: 'Poppins';
         margin-top: 20px;
         text-align: center;
+        line-height: 1;
     }
 
     .text-section{
@@ -188,7 +227,7 @@ br{
     }
 
     .text-section p{
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
     
     }
@@ -206,13 +245,17 @@ br{
         display: none;
     }
 
+    .button-section{
+        text-align: center;
+    }
+
   
     
 }
 /* About Section */
 
 .about{
-    padding-top: 1%;
+    /* padding-top: 1%; */
 }
 
 .about h2, .portfolio h2{
@@ -240,22 +283,52 @@ br{
 color: white;
 }
 
-/* Portfolio project */
-.portfolio h2{
-    margin-bottom: 20px;
+@media screen and (max-width:640px) {
+    .about p{
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .about{
+      text-align: center;
+    }
 }
 
-article h3{
-    font-size: 2rem;
-    font-weight: 500;
-}
+
+
+/* Portfolio project */
 .portfolio-section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
    
-    column-gap: 60px;
-    row-gap: 30px;
+    column-gap: 70px;
+    row-gap: 35px;
 }
+.portfolio h2{
+    margin-bottom: 20px;
+}
+
+.profile-title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.profile-title::before{
+    content: "  ";
+    background-color: white;
+    position: relative;
+    padding: 3px;
+    top: 60px;
+    display: block;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+
+
 
 article{
     width: 450px;
@@ -274,6 +347,60 @@ article img{
     /* margin: 5% auto; */
 }
 
+.article-footer{
+    padding: 10px;
+    margin-top: 20px;
+    line-height: 2;
+}
+
+.card button{
+    background-color: white;
+    color: black;
+    margin: 20px 0px;
+    padding: 10px 30px;
+}
+
+.card button a{
+    color: black;
+}
+
+.article-footer{
+    text-align: left;
+}
+
+@media screen and (max-width:640px) {
+    .portfolio-section{
+        grid-template-columns:  1fr;
+    
+    }
+
+    .portfolio-heading{
+        text-align: center;
+    }
+
+    article{
+       width: 100%;
+       
+    }
+
+    article img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .profile-title::before{
+        padding: 2px;
+
+    }
+
+    .article-footer {
+      text-align: center;
+      width: 90%;
+    
+    }
+    
+    
+}
 /* Skills */
 
 .skill-set{
@@ -291,12 +418,37 @@ article img{
     list-style-type:disc;
 }
 
+@media screen and (max-width:640px) {
+    .skill-set{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px;
+        gap: 10px;
+       
+    }
+    
+}
+
 /* Footer */
 footer{
     background-color: #0f1624;
     padding: 2% 10%;
     text-align: center;
     color: white;
+}
+
+.footer-break{
+    display: none;
+}
+
+@media screen and (max-width:640px) {
+  
+.footer-break{
+    display: block;
+}
+  
+footer{
+    padding: 5% 10%;
+}
 }
 
 
