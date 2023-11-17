@@ -6,7 +6,10 @@
 body{
     font-family: 'Poppins';
 }
-
+.container{
+    margin: auto;
+    width: 100%;
+}
 h2{
     font-size: 2rem;
     font-weight: 500;
@@ -31,8 +34,8 @@ box-shadow: 0 2px 5px 0 black;
 header{
     justify-content: space-between;
     /* height: 44px; */
-    margin: auto;
-    padding: 15px 10%;
+    /* margin: auto; */
+    /* padding: 5% 10%; */
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-weight: 500;
@@ -85,11 +88,12 @@ a{
 /* Header end */
 @media screen and (max-width:640px) {
     header{
-        padding: 15px 5%;
+        padding: 2% 10%;
+       
     }
 
     .icon-hamburger{
-        display: flex;
+        display: block;
         color: black;
     }
 
