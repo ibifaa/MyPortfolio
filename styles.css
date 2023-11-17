@@ -393,9 +393,10 @@ article img{
 
     }
 
-    .article-footer {
-      text-align: center;
-      width: 90%;
+    .article-footer button{
+       text-align: center;
+       margin: 5% auto;
+       font-size: 1rem;
     
     }
     
