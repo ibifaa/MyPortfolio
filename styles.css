@@ -90,11 +90,19 @@ a{
     color: black;
 }
 
+.close{
+    display: none;
+ }
+
 /* Header end */
 @media screen and (max-width:640px) {
     header{
         padding: 2% 10%;
        
+    }
+
+    .link{
+        margin-bottom: 10px;
     }
 
     .icon-hamburger{
@@ -112,13 +120,26 @@ a{
         position: absolute;
         height: 100px;
         background-color: white;
-        width: 25%;
+        width: 85%;
+        height: 300px;
         left: 0;
-        padding: 10px;
+        padding: 15px;
         line-height: 1.5;
-        font-size: 1rem;
+        font-size: 1.2rem;
         z-index: 2;
         top: 10;
+    }
+
+    .closeLinks{
+        display: none;
+    }
+
+    .close{
+       position: absolute;
+       right: 10px;
+       font-size: 1.5rem;
+       margin-bottom: 10px;
+       display: block;
     }
 
     /* .links li {
@@ -127,18 +148,12 @@ a{
         width: 100%;
     } */
 
-    .links li:hover{
-        background-color: black;
-        color: white;
-        width: 100%;
-        
+    .links li a:hover{
+      font-size: 2rem;
+      color: #007ced;
+    
     }
 
-    .links li a:hover{
-        color: white;
-        padding: 5% ;
-        font-size: 1.5rem;
-    }
     
 }
 
@@ -149,7 +164,6 @@ a{
     padding: 12% 10% 8%;
     gap: 80px;
     margin: auto;
-   
 
 }
 
@@ -407,6 +421,39 @@ article img{
     
     
 }
+
+/* Services  */
+
+
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+.services article{
+    background-color: white;
+    color: black;
+    width: 100%;
+    display: block;
+}
+
+.services article img{
+   width: 40%;
+   margin-bottom: 0;
+   height: 100px;
+}
+
+
+@media screen and (max-width:600px) {
+    .services-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
 /* Skills */
 
 .skill-set{
@@ -427,9 +474,13 @@ article img{
 @media screen and (max-width:640px) {
     .skill-set{
         grid-template-columns: repeat(2, 1fr);
-        margin-left: 20px;
+        margin-left: 10px;
         gap: 10px;
        
+    }
+
+    .skills h2{
+        text-align: center;
     }
     
 }
